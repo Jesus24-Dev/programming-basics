@@ -148,9 +148,31 @@ Convierte el objeto "mágico" de Idiorm en un array asociativo estándar de PHP.
 
 ## Flujo de un CRUD
 
-|Operacion||Metodos Idiorm|
-|:---:||:---:|
-|Create||for_table, create, save|
-|Read||for_table, find_many, where, as_array|
-|Update||for_table, find_one, save|
-|Delete||for_table, find_one, delete|
+| Operación | Métodos Idiorm |
+| :--- | :--- |
+| Create | `for_table`, `create`, `save` |
+| Read | `for_table`, `find_many`, `where`, `as_array` |
+| Update | `for_table`, `find_one`, `save` |
+| Delete | `for_table`, `find_one`, `delete` |
+
+## Descubierto en la practica
+
+Por defecto, Idiorm asume que todas las tablas tienen una columna llamada id como clave primaria. En caso de utilizar otro nombre, tomaria una consulta similar a esta: 
+
+`SELECT * FROM usuarios WHERE id = '$cedula'`
+
+Para solucionarlo, se hace de la siguiente manera:
+
+### Indicar a Idiorm cuál es la columna clave (La opción recomendada)
+Si quieres seguir usando find_one($valor), debes configurar Idiorm para que sepa qué columna usar como clave primaria para esa tabla específica. Puedes hacerlo así:
+
+```php
+Flight::route('GET /editar/@cedula', function($cedula) {
+    // Le indicamos a Idiorm que para 'usuarios', la PK es 'cedula'
+    $usuario = ORM::for_table('usuarios')
+                  ->use_id_column('cedula')
+                  ->find_one($cedula);
+                  
+    Flight::render("formulario", ['editar' => true, 'usuario' => $usuario]);
+});
+```
