@@ -1,0 +1,21 @@
+id_transaccion,fecha_venta,producto,categoria,cantidad,precio_unitario
+1,2023-05-01,Laptop Pro,Computación,1,1200.0
+2,2023-05-01,Mouse Óptico,Accesorios,2,25.0
+3,02/05/2023,laptop pro,Computación,1,1200.0
+4,2023-05-02,Teclado Mec,Accesorios,1,80.0
+5,2023-05-03,Monitor 4K,Periféricos,1,350.0
+6,2023-05-03,Mouse Óptico,Accesorios,5,
+7,2023-05-04,LAPTOP PRO,Computación,1,1200.0
+8,04-05-2023,Monitor 4K,Periféricos,2,350.0
+9,2023-05-05,Teclado Mec,Accesorios,3,80.0
+10,2023-05-05,Mouse Óptico,Accesorios,1,25.0
+11,2023-05-06,Laptop Pro,,1,1200.0
+12,2023-05-06,Mouse Óptico,Accesorios,2,25.0
+13,2023-05-07,Teclado Mec,Accesorios,1,80.0
+14,2023-05-07,Monitor 4k,Periféricos,1,350.0
+15,2023-05-08,Laptop Pro,Computación,1,1200.0
+16,2023-05-08,,Accesorios,2,25.0
+17,2023-05-09,Monitor 4K,Periféricos,1,350.0
+18,2023-05-09,Teclado Mec,Accesorios,4,80.0
+19,2023-05-10,Mouse Óptico,Accesorios,2,25.0
+20,2023-05-10,Laptop Pro,Computación,1,1200.0
