@@ -22,23 +22,23 @@ print("Archivo 'streaming_data.csv' generado con éxito.")
 
 ## Requerimientos 
 
-1. Carga e Identificación de Duplicados
+### 1. Carga e Identificación de Duplicados
 A veces, por errores de sistema, los datos se repiten.
 - **Función**: df.duplicated() nos dice si hay filas idénticas.
 - **Función**: df.drop_duplicates() las elimina.
 - **Reto**: Elimina los duplicados del archivo y guarda el resultado en el mismo df.
 
-2. Limpieza de "Vacíos" (NaN)
+### 2. Limpieza de "Vacíos" (NaN)
 Un dato vacío puede arruinar un promedio.
 - **Función**: df.fillna(valor) reemplaza los nulos con algo específico.
 - **Reto**: En la columna puntuacion, reemplaza los valores nulos con un 0.
 
-3. El Método .loc[] (Filtrado Inteligente)
+### 3. El Método .loc[] (Filtrado Inteligente)
 A diferencia de los filtros básicos, .loc es la forma profesional de acceder a grupos de filas y columnas.
 - **Sintaxis**: df.loc[filas, columnas]
 - **Reto**: Crea un nuevo DataFrame llamado exitos que contenga solo las filas donde vistas_millones sea mayor a 150 y solo las columnas titulo y vistas_millones.
 
-4. Estadísticas Rápidas
+### 4. Estadísticas Rápidas
 - **Función**: df['columna'].describe() te da un resumen completo (mínimo, máximo, media).
 - **Reto**: Obtén el resumen estadístico de la columna vistas_millones.
 
